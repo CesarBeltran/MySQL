@@ -21,8 +21,9 @@ CREATE TABLE contactos(
 	nacimiento DATE,
 	telefono VARCHAR(13),
 	pais VARCHAR(50) NOT NULL,
-	imagen VARCHAR(50), /*SE GUARDA LA RUTA DE LA IMAGEN*/
-	PRIMARY KEY(email)  /*Campo que identifica como unico al registro de informacion*/
+	imagen VARCHAR(50), 						/*SE GUARDA LA RUTA DE LA IMAGEN*/
+	PRIMARY KEY(email)  						/*Campo que identifica como unico al registro de informacion*/
+	FULLTEXT KEY buscador(email,nombre,sexo,telefono,pais)      /*llave q busca en los campos mencionados */
 );
 
 
